@@ -1,0 +1,134 @@
+ERROR - 2026-10-14 04:14:26 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\laragon\www\ci_siswa\system\Database\MySQLi\Connection.php:200
+Stack trace:
+#0 C:\laragon\www\ci_siswa\system\Database\MySQLi\Connection.php(200): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'ci4', 3306, '', 0)
+#1 C:\laragon\www\ci_siswa\system\Database\BaseConnection.php(550): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\ci_siswa\system\Database\BaseConnection.php(792): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\ci_siswa\system\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\ci_siswa\system\Model.php(256): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ci_siswa\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ci_siswa\app\Controllers\Home.php(13): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ci_siswa\system\CodeIgniter.php(974): App\Controllers\Home->index()
+#8 C:\laragon\www\ci_siswa\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\laragon\www\ci_siswa\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\ci_siswa\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\ci_siswa\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\ci_siswa\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\laragon\www\ci_siswa\system\Database\MySQLi\Connection.php:230
+Stack trace:
+#0 C:\laragon\www\ci_siswa\system\Database\BaseConnection.php(550): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\ci_siswa\system\Database\BaseConnection.php(792): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\ci_siswa\system\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\ci_siswa\system\Model.php(256): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\ci_siswa\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\laragon\www\ci_siswa\app\Controllers\Home.php(13): CodeIgniter\BaseModel->findAll()
+#6 C:\laragon\www\ci_siswa\system\CodeIgniter.php(974): App\Controllers\Home->index()
+#7 C:\laragon\www\ci_siswa\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\laragon\www\ci_siswa\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\ci_siswa\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\ci_siswa\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\ci_siswa\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2026-10-14 04:14:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 601.
+ 1 SYSTEMPATH\Database\BaseConnection.php(792): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `siswa`', [], false)
+ 3 SYSTEMPATH\Model.php(256): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-14 04:16:35 --> CodeIgniter\Exceptions\ConfigException: Invalid DBDriver name: "MySQL".
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\Database.php on line 180.
+ 1 SYSTEMPATH\Database\Database.php(61): CodeIgniter\Database\Database->checkDbExtension('MySQL')
+ 2 SYSTEMPATH\Database\Config.php(80): CodeIgniter\Database\Database->load([...], 'default')
+ 3 SYSTEMPATH\Model.php(153): CodeIgniter\Database\Config::connect('default')
+ 4 APPPATH\Controllers\Home.php(11): CodeIgniter\Model->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-14 04:16:50 --> CodeIgniter\Exceptions\ConfigException: Invalid DBDriver name: "MySQL".
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\Database.php on line 180.
+ 1 SYSTEMPATH\Database\Database.php(61): CodeIgniter\Database\Database->checkDbExtension('MySQL')
+ 2 SYSTEMPATH\Database\Config.php(80): CodeIgniter\Database\Database->load([...], 'default')
+ 3 SYSTEMPATH\Model.php(153): CodeIgniter\Database\Config::connect('default')
+ 4 APPPATH\Controllers\Home.php(11): CodeIgniter\Model->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-14 04:16:56 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'ci4' in C:\laragon\www\ci_siswa\system\Database\MySQLi\Connection.php:200
+Stack trace:
+#0 C:\laragon\www\ci_siswa\system\Database\MySQLi\Connection.php(200): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'ci4', 3306, '', 0)
+#1 C:\laragon\www\ci_siswa\system\Database\BaseConnection.php(550): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\ci_siswa\system\Database\BaseConnection.php(792): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\ci_siswa\system\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\ci_siswa\system\Model.php(256): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ci_siswa\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ci_siswa\app\Controllers\Home.php(13): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ci_siswa\system\CodeIgniter.php(974): App\Controllers\Home->index()
+#8 C:\laragon\www\ci_siswa\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\laragon\www\ci_siswa\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\ci_siswa\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\ci_siswa\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\ci_siswa\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'ci4' in C:\laragon\www\ci_siswa\system\Database\MySQLi\Connection.php:230
+Stack trace:
+#0 C:\laragon\www\ci_siswa\system\Database\BaseConnection.php(550): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\ci_siswa\system\Database\BaseConnection.php(792): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\ci_siswa\system\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\ci_siswa\system\Model.php(256): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\ci_siswa\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\laragon\www\ci_siswa\app\Controllers\Home.php(13): CodeIgniter\BaseModel->findAll()
+#6 C:\laragon\www\ci_siswa\system\CodeIgniter.php(974): App\Controllers\Home->index()
+#7 C:\laragon\www\ci_siswa\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\laragon\www\ci_siswa\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\ci_siswa\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\ci_siswa\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\ci_siswa\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2026-10-14 04:16:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'ci4'
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 601.
+ 1 SYSTEMPATH\Database\BaseConnection.php(792): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `siswa`', [], false)
+ 3 SYSTEMPATH\Model.php(256): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-14 04:32:46 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "siswa_view.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('siswa_view.php')
+ 2 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('siswa_view', [], true)
+ 3 APPPATH\Controllers\Home.php(15): view('siswa_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
